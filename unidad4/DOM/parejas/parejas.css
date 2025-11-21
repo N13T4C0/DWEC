@@ -1,0 +1,73 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contenedor {
+  text-align: center;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  max-width: 1000px;
+  width: 95%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #f1c40f;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ecf0f1;
+}
+
+.cont-reloj {
+  margin-bottom: 1.5rem;
+}
+
+#reloj {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  background-color: #111;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+#cont-cartas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+#cont-cartas img {
+  width: 140px;
+  height: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+

@@ -1,0 +1,79 @@
+/* ahorcado.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #ccc;
+}
+
+#juego {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+#muñeco {
+  margin-bottom: 20px;
+}
+
+#fig {
+  font-family: monospace;
+  white-space: pre;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#palabra {
+  font-size: 2rem;
+  letter-spacing: 8px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  width: 60%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button#adivinar {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#adivinar:hover {
+  background-color: #2980b9;
+}

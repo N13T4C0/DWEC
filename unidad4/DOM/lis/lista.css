@@ -1,0 +1,113 @@
+/* lista.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#contenedor {
+  background-color: #ffffff;
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#busqueda {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#bus {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#guardar {
+  padding: 10px 15px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#guardar:hover {
+  background-color: #27ae60;
+}
+
+#lista {
+  list-style: none;
+  padding: 0;
+}
+
+#lista li {
+  background-color: #ecf0f1;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lista li input[type="text"] {
+  flex: 1;
+  padding: 6px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#lista button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#lista button:nth-child(2) {
+  background-color: #3498db;
+  color: white;
+}
+
+#lista button:nth-child(3) {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#reset {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#borrar {
+  padding: 10px 20px;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#borrar:hover {
+  background-color: #d35400;
+}

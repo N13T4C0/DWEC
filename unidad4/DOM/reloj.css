@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FFA500; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.reloj-container {
+    margin-bottom: 40px;
+}
+
+#reloj {
+    font-size: 64px;
+    font-family: 'Courier New', monospace;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px ;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: white;
+    color: #FFA500;
+}
