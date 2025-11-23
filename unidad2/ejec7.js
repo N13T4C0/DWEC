@@ -66,7 +66,7 @@ function validarContrasena(contra) {
     if (!tieneSimbolo) 
         mensaje += "Debe incluir un símbolo especial. ";
 
-    if (mensaje === "") {
+    if (mensaje == "") {
         console.log( "La contraseña es val");
     } else {
         console.log("La contraseña no es válida: ");
@@ -121,7 +121,7 @@ function juegoAdivinar() {
       continue; // No descuenta intento
     }
 
-    if (intento === numeroSecreto) {
+    if (intento == numeroSecreto) {
       console.log("¡Ganaste! El número era " + numeroSecreto);
       acierto = true;
       break;
@@ -145,7 +145,7 @@ let luhnNum = (Math.floor(Math.random()*999999999999999)+111111111111111).toStri
 //et resultado = [];
 for(let k = luhnNum.length - 1; k >= 0; k--){
     let n = parseInt(luhnNum[k]);
-    if (((luhnNum.length - 1 - k) % 2) === 1) { // Posiciones pares desde la derecha
+    if (((luhnNum.length - 1 - k) % 2) == 1) { // Posiciones pares desde la derecha
         let doble = n * 2;
         if (doble >= 10) {
             doble = doble - 9; // Suma de cifras
@@ -156,7 +156,7 @@ for(let k = luhnNum.length - 1; k >= 0; k--){
     }
 }
 console.log("Tarjeta es:" + luhnNum);
-console.log("Números procesados tipo Luhn: " + resultado.reverse().join(""));
+console.log("Números procesados tipo Luhn: " + resultado.join(""));
 
 // 9
 function promedio(numeros){

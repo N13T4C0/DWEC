@@ -26,7 +26,6 @@ function lista(){
             let textOriginal = nuevoli.textContent;
             nuevoli.innerHTML="";
             let nuevoinput = document.createElement("input");
-            nuevoli.appendChild(nuevoinput);
             nuevoinput.value = "";
             nuevoli.appendChild(nuevoinput);
             nuevoinput.addEventListener("keydown",(e)=>{

@@ -27,12 +27,13 @@ let mov = (fila,columna,jugador)=> {
 }
 
 function hayGanador(jugador) {
+  let resultado = false;
   let condiciones = [
     // Filas
     [tablero[0][0], tablero[0][1], tablero[0][2]],
-    [tablero[1][0], tablero[1][1], tablero[1][2]],
+      [tablero[1][0], tablero[1][1], tablero[1][2]],
     [tablero[2][0], tablero[2][1], tablero[2][2]],
-    // Columnas
+    // Colum
     [tablero[0][0], tablero[1][0], tablero[2][0]],
     [tablero[0][1], tablero[1][1], tablero[2][1]],
     [tablero[0][2], tablero[1][2], tablero[2][2]],
@@ -44,11 +45,11 @@ function hayGanador(jugador) {
   for (let i = 0; i < condiciones.length; i++) {
     let fila = condiciones[i];
     if (fila[0] == jugador && fila[1] == jugador && fila[2] == jugador) {
-      return true;
+      resultado= true;
     }
   }
 
-  return false;
+  return resultado;
 }
 
 

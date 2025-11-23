@@ -8,16 +8,15 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Define el  círculo
-const centro = [37.194373454653565,-3.618398381477514]; // Centro del área el ayala he puesto
-const radioMetros = 20;
-const area = L.circle(centro, {
+let centro = [37.194373454653565,-3.618398381477514]; // Centro del área el ayala he puesto
+let radioMetros = 20;
+let area = L.circle(centro, {
   radius: radioMetros,
   color: 'blue',
   fillColor: '#aaddff',
   fillOpacity: 0.3
 }).addTo(map);
 
-// Inicializa marcador y línea
 const puntos = [];
 const polyline = L.polyline(puntos, { color: 'red' }).addTo(map);
 const marker = L.marker([0, 0]).addTo(map);

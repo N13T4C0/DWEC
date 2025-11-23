@@ -17,9 +17,9 @@ window.onload = function () {
                 colores[mov].style.opacity = "1";
                 setTimeout(() => {
                     colores[mov].style.opacity = "0.5";
-                    if (i === arrayMov.length - 1) {
+                    if (i == arrayMov.length - 1) {
                         esperandoClick = true;
-                        secuenciaJugador = [];
+                        secuenciaJugador = []; // reiniciar jugada para limpiiar lo que se ha pulsado antes
                         document.getElementById("simon").textContent = "Tu turno";
                     }
                 }, 500);
@@ -36,7 +36,7 @@ window.onload = function () {
             secuenciaSimon.push(aleatorio);
         }
         esperandoClick = false;
-        document.getElementById("simon").textContent = "Observa la sec...";
+        document.getElementById("simon").textContent = "Observa la sec";
         avnimaSECUENCIA(secuenciaSimon);
     }
 
@@ -51,36 +51,31 @@ window.onload = function () {
         if (secuenciaJugador[i] !== secuenciaSimon[i]) {
             document.getElementById("simon").textContent = " Fallaste";
             esperandoClick = false;
-        } else if (secuenciaJugador.length == secuenciaSimon.length) {
+        } else if (secuenciaJugador.length == secuenciaSimon.length)  { // para saber si ha hecho los 4 clicks
             document.getElementById("simon").textContent = "Bien hecho";
             esperandoClick = false;
         }
     }
 
-    // Asignar eventos manualmente
-    document.getElementById("rojo2").addEventListener("click", function () {
+    // 
+    document.getElementById("rojo2").addEventListener("click", ()=> {
         manejarClick("rojo");
     });
 
-    document.getElementById("azul2").addEventListener("click", function () {
+    document.getElementById("azul2").addEventListener("click", ()=> {
         manejarClick("azul");
     });
 
-    document.getElementById("amarillo2").addEventListener("click", function () {
+    document.getElementById("amarillo2").addEventListener("click", ()=> {
         manejarClick("amarillo");
     });
 
-    document.getElementById("verde2").addEventListener("click", function () {
+    document.getElementById("verde2").addEventListener("click",()=> {
         manejarClick("verde");
     });
 
     // Activar botón de inicio
-    let boton = document.querySelector("button");
+    let boton = document.querySelector("button"); // para el primer buton que haya en el html
     boton.addEventListener("click", iniciarSimon);
 
-    // Estado inicial de opacidad
-    document.getElementById("rojo2").style.opacity = "0.5";
-    document.getElementById("azul2").style.opacity = "0.5";
-    document.getElementById("amarillo2").style.opacity = "0.5";
-    document.getElementById("verde2").style.opacity = "0.5";
 };

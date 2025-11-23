@@ -58,7 +58,7 @@ function cambioCara() {
             return alert("Esta volteada");
         } 
 
-        carta.src = "img/" + cartasGeneradas[indice] + ".jpg";
+        carta.src = "img/" + cartasGeneradas[indice] + ".jpg"; // para que se de la vuelta
 
         if (contador == 0) {
             primera = { 

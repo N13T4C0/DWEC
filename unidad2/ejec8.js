@@ -13,22 +13,22 @@
     radius: 20
   }).addTo(map);
 
-  // Luego solo los movemos:
+  // los movemos:
   function obtengoposicion(posicion) {
-    const lat = posicion.coords.latitude;
-    const lon = posicion.coords.longitude;
+    let lat = posicion.coords.latitude;
+    let lon = posicion.coords.longitude;
     map.setView([lat, lon], 19);
     marker.setLatLng([lat, lon]);
     circle.setLatLng([lat, lon]);
   }
 
   function mostrarUbicacion(position) {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
 
     document.getElementById("coordenadas").innerHTML =
       "Latitud: " + lat + " | Longitud: " + lon;
-      const accuracy = position.coords.accuracy; // en metros
+      let accuracy = position.coords.accuracy; // en metros
     document.getElementById("precision").innerHTML = 
       "pre:" + accuracy + " metros";
   }

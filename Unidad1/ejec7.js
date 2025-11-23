@@ -2,16 +2,14 @@
 let num1 = Number(prompt("Ingrese el primer número"));
 let num2 = Number(prompt("Ingrese el segundo número"));
 
-// Tu código aquí para mostrar suma, resta, multiplicación y división
 console.log(num1 + num2);
 console.log(num1 - num2);
 console.log(num1 * num2);
-console.log(num1 / num2);
+ console.log(num1 / num2);
 
 // 2
 let numero = Number(prompt("Ingrese un número"));
 
-// Usa un condicional para determinar si es par o impar
 let par = numero % 2 ? "No par" : "par";
 console.log(par);
 
@@ -19,7 +17,6 @@ console.log(par);
 let a = Number(prompt("Número 1"));
 let b = Number(prompt("Número 2"));
 let c = Number(prompt("Número 3"));
-// Escribe un condicional para encontrar el mayor
 if(a>b && a>c){
     console.log("A es mayor");
 }else if(b>a && b >c){
@@ -29,14 +26,11 @@ if(a>b && a>c){
 
 // 4
 let num = Number(prompt("Ingrese un número"));
-// Usa un bucle for para mostrar la tabla de multiplicar
 for(let a=0;a<=10;a++){
     console.log(num+"x"+a+"= "+num*a);
-    // (`${i} * ${num} = ${num2} <br> </br>`);
 }
 // 5
 let N = Number(prompt("Ingrese un número"));
-// Usa un bucle for y una variable acumuladora para sumar
 for(let o=0;o<=N;o++){
     console.log(o);
 }
@@ -45,14 +39,12 @@ let positivos = 0;
 let negativos = 0;
 
 for(let i = 0; i < 5; i++) {
-    let num = Number(prompt(`Ingrese el número ${i+1}`));
-    // Incrementa positivos o negativos según corresponda
+    let num = Number(prompt("Ingrese el número"+(i+1)));
     let cont= num>=0 ? positivos++ : negativos++;
 }
 console.log("Hay: "+positivos+"positivos y "+negativos+" negativos ");
 // 7
 let numm = Number(prompt("Ingrese un número, pa los primos "));
-// Usa un bucle para verificar si es divisible por algún número menor que él
 let n=2;
 primo = true;
 do {
@@ -66,7 +58,7 @@ if (primo==true){
 }else 
     console.log("No es primo");
 // 8
-let numeroo = Number(prompt("Ingrese un nm (facto)"));
+let numeroo = Number(prompt("Ingrese un nm facto"));
 let factorial = 1;
 let texto = "";
 
@@ -81,7 +73,6 @@ console.log("Factorial final de " + numeroo + " es: " + factorial);
 console.log("Secuencia usada: " + texto);
 // 9
 let N1 = Number(prompt("Ingrese un número(t devuelve los pares)"));
-// Usa un bucle y el operador % para imprimir los pares
 for(let y=0;y<N1;y++){
     if(y%2==0){
         console.log(y+" ");

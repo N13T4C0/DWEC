@@ -4,9 +4,7 @@ window.onload = ()=>{
     act3();
     act4();
     act5();
-    act6();
     act7();
-    avnimaSECUENCIA(["rojo", "azul", "verde", "amarillo"]);
 
 }
 
@@ -124,123 +122,7 @@ function valoresAct5(){
     
     return randnum;
 }
-function act6(){
-    let preguntas = document.getElementById("simon");
-    preguntas.innerHTML = "<p>Elige el color rojo</p>";
-    secAct6();
-}   
-function secAct6(){
-    let preguntas = document.getElementById("simon");
 
-    let i =0;
-    let secuencia = ["rojo2","verde2","amarillo2","azul2"];
-    let simon = document.getElementById("coloressimon");
-    simon.addEventListener("click",(e)=>{
-        if( e.target.id==secuencia[i]){
-            console.log(e.target.id)
-            if(e.target.id=="azul2"){
-                resetCuadrado();
-                alert("HAS GANADO EL SIMON DICE");
-                act6();
-            }else{
-                cambioAcertado(secuencia[i]);
-                i++;
-                preguntas.innerHTML = "<p>Has acertado el color, el siguiente es: </p>"+secuencia[i];
-            }
-            
-        }else {
-            i=0;
-            alert("No has acertado");
-        }
-        
-    })
-}
-
-function cambioAcertado(color){
-    let rojo2 = document.getElementById("rojo2");
-    let azul2 = document.getElementById("azul2");
-    let verde2 = document.getElementById("verde2");
-    let amarillo2 = document.getElementById("amarillo2");
-
-    if(color=="rojo2"){
-        rojo2.style.backgroundColor = "rgba(104, 104, 104, 1)";
-    }
-    if(color=="azul2"){
-        azul2.style.backgroundColor = "rgba(104, 104, 104, 1)";
-    }
-    if(color=="verde2"){
-        verde2.style.backgroundColor = "rgba(104, 104, 104, 1)";
-    }
-    if(color=="amarillo2"){
-        amarillo2.style.backgroundColor = "rgba(104, 104, 104, 1)";
-    }
-}
-
-function resetCuadrado(){
-    rojo2.style.backgroundColor =" rgba(230, 2, 2, 1)";
-    // forma original para el verde
-    verde2.style.backgroundColor = "rgba(0, 255, 17, 1)";
-    // forma original para el amarrillo
-    amarillo2.style.backgroundColor = "rgba(242, 255, 0, 1)";
-    // forma original para el azul
-    azul2.style.backgroundColor = "rgba(0, 4, 255, 1)";
-    
-}
-//
-let secuenciaSimon = [];
-let secuenciaJugador = [];
-let esperandoClick = false;
-
-function avnimaSECUENCIA(arrayMov) {
-    const colores = {};
-    ["rojo", "azul", "amarillo", "verde"].forEach(color => {
-        colores[color] = document.getElementById(color + "2");
-    });
-
-    arrayMov.forEach((mov, i) => {
-        setTimeout(() => {
-            colores[mov].style.opacity = "1";
-            setTimeout(() => {
-                colores[mov].style.opacity = "0.5";
-                if (i === arrayMov.length - 1) {
-                    esperandoClick = true;
-                    secuenciaJugador = [];
-                    document.getElementById("simon").textContent = "¡Tu turno!";
-                }
-            }, 500);
-        }, i * 1000);
-    });
-}
-
-function iniciarSimon() {
-    const colores = ["rojo", "azul", "amarillo", "verde"];
-    secuenciaSimon = [];
-    for (let i = 0; i < 4; i++) {
-        secuenciaSimon.push(colores[Math.floor(Math.random() * colores.length)]);
-    }
-    esperandoClick = false;
-    document.getElementById("simon").textContent = "Observa la secuencia...";
-    avnimaSECUENCIA(secuenciaSimon);
-}
-
-function manejarClick(color) {
-    if (!esperandoClick) return;
-    secuenciaJugador.push(color);
-    const i = secuenciaJugador.length - 1;
-    if (secuenciaJugador[i] !== secuenciaSimon[i]) {
-        document.getElementById("simon").textContent = "❌ Fallaste";
-        esperandoClick = false;
-    } else if (secuenciaJugador.length === secuenciaSimon.length) {
-        document.getElementById("simon").textContent = "✅ ¡Bien hecho!";
-        esperandoClick = false;
-    }
-}
-
-["rojo", "azul", "amarillo", "verde"].forEach(color => {
-    const div = document.getElementById(color + "2");
-    div.style.opacity = "0.5";
-    div.addEventListener("click", () => manejarClick(color));
-});
 
 
 

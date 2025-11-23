@@ -100,19 +100,19 @@ function mostrarPalabra(){
      for (i=0;i<palabraEscogida.length;i++) {
         palabraOculta.push("-")
     }
-    palabra.innerHTML = "<p>"+palabraOculta.join("")+"</p>";
+    palabra.innerHTML = "<p>"+palabraOculta.join(" ")+"</p>"; // para converti el array en string y cn espacios
 }
 function comparacion(){
     let palabra = document.getElementById("palabra");
     let adivinar = document.getElementById("adivinar");
     adivinar.addEventListener("click",()=>{
         let usuario = document.getElementById("pregunta").value;
-            if (usuario.length == 0) return;
+            if (usuario.length == 0) errores+1;
         if(palabraEscogida.includes(usuario[0])){
             console.log("acertado priemra palabra");
             for (let i = 0; i < palabraEscogida.length; i++) {
                 if (palabraEscogida[i] == usuario[0]) {
-                    palabraOculta[i] = usuario[0];  // Reemplazar guión por letra
+                    palabraOculta[i] = usuario[0];  // oara remplazar el - por la letra
                 }
             }
         palabra.innerHTML = "<p>"+palabraOculta.join("")+"</p>";
@@ -128,7 +128,7 @@ function comparacion(){
             console.log(errores)
         }
         if(!palabraOculta.includes("-")){
-            alert("Has ganado la palabra era:")+palabraEscogida;
+            alert("Has ganao");
             iniciarJuego();
         }
     })

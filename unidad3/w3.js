@@ -42,7 +42,7 @@ let crearTesoro = (dimensiones1, dimensiones2) => {
   }
   let array = [];
 
-  // Paso 1: Crear matriz vacía
+  // xcrear matriz vacia
   for (let i = 0; i < dimensiones1; i++) {
     array[i] = [];
     for (let j = 0; j < dimensiones2; j++) {
@@ -70,18 +70,11 @@ let crearTesoro = (dimensiones1, dimensiones2) => {
     }
   }
 
-  // Insertar pistas en la matriz
-  for (let i = 0; i < ruta.length - 1; i++) {
-    
-  }
-
-  //  Insertar el tesoro en la última celda
-  
 
   //  Rellenar cn nm alea
   for (let i = 0; i < dimensiones1; i++) {
     for (let j = 0; j < dimensiones2; j++) {
-      if (array[i][j] === 0) {
+      if (array[i][j] == 0) {
         let aleaa1 = Math.floor(Math.random() * dimensiones1) + 1;
         let aleaa2 = Math.floor(Math.random() * dimensiones2) + 1;
         array[i][j] = parseInt(aleaa1.toString() + aleaa2.toString());
@@ -118,15 +111,15 @@ function imprimirMapaBonito(matriz) {
   }
 }
 
-function buscarTesoro(mapa) {
-  let pista = mapa[0][0];
-  console.log("Empieza en 1,1 " + pista);
-  let encontrao2 = true;
-  // while (encontrao2) {
+// function buscarTesoro(mapa) {
+//   let pista = mapa[0][0];
+//   console.log("Empieza en 1,1 " + pista);
+//   let encontrao2 = true;
+//   // while (encontrao2) {
  
-  //}
-}
-let mapa = crearTesoro(5, 5);
+//   //}
+// }
+let mapa = crearTesoro(6, 6);
 imprimirMapaBonito(mapa);
 
 // pr 

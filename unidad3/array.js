@@ -75,7 +75,7 @@ console.log(Math.max(...arraynum));
 console.log(Math.min(...arraynum));
 // 14
 let arraypla = [[1,2],[3,4]];
-let arrayaplanao = arraypla.flat(); // para aplanar el array
+let arrayaplanao = arraypla.flat(); // para aplanar el arra
 console.log(arrayaplanao);
 // 15
 let array4 = [1,2,3,4,1,2,3,4,1];

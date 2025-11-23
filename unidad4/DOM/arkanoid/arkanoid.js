@@ -126,7 +126,7 @@ function animaBola() {
                         }
                     // Cambiar dirección de la bola
                     velocidadY *= -1;
-                    if(b.status==0)break;
+                    // if(b.status==0)break; en pruebas colision()
                 }
             }
         }
