@@ -1,0 +1,19 @@
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    background-image: url(https://wallpapers.com/images/high/aesthetic-spongebob-desktop-tag07r8oc6hdxkvn.webp);
+}
+#contenedor div{
+    text-align: center;
+}
+#contenedor p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+button{
+    width: 400px;
+    height: 50px;
+}
