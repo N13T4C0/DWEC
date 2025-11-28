@@ -100,5 +100,8 @@ window.onscroll = () => {
 }
 // para el tipo serie o peliculas
 function tipoBusqueda(){
-  let tipoPelicula = document.getElementById("pelicula")
+  let tipoPelicula = document.getElementById("pelicula");
+  let tipoSerie = document.getElementById("serie");
+
+  
 }

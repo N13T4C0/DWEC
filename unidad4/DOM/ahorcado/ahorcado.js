@@ -63,7 +63,7 @@ let muñeco = [
 =========
   `
 ];
-let palabras=["HTML","JAVASCRIPT","CSS","PHP"];
+let palabras=["HTML","JAVASCRIPT","CSS","PHP","REACT","VUE","JAVA"];
 let palabraEscogida;
 let palabraLetras=[];
 let errores=0;
@@ -106,7 +106,7 @@ function comparacion(){
     let palabra = document.getElementById("palabra");
     let adivinar = document.getElementById("adivinar");
     adivinar.addEventListener("click",()=>{
-        let usuario = document.getElementById("pregunta").value;
+        let usuario = document.getElementById("pregunta").value.toUpperCase();
             if (usuario.length == 0) errores+1;
         if(palabraEscogida.includes(usuario[0])){
             console.log("acertado priemra palabra");
