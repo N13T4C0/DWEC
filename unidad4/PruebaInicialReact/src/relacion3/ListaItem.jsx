@@ -15,17 +15,19 @@ function ListaItem() {
       "cantidad":8
     }
 ]}
-  const [items, setItems] = useState([datosIniciales.items]);
+  const [items, setItems] = useState(datosIniciales.items);
   const [nuevoItem, setNuevoItem] = useState("");
 
   function agregarItem() {
     
-    setItems([...items, nuevoItem]);
+    setItems([...items, {nombre: nuevoItem, cantidad: ""}]);
     setNuevoItem("");
   }
   // funcion para borrar item
-  function borrarItem(id){
-    console.log("Borrar el item:"+id);
+  function borrarItem(index){
+    const nuevosItems = [...items] // copia del array
+    nuevosItems.splice(index,1);
+    setItems(nuevosItems);
   }
  
   function actualizarItem(index, nuevoTexto) {
@@ -47,7 +49,7 @@ function ListaItem() {
       <button onClick={agregarItem}>Agregar</button>
 
       <ul>
-        {datosIniciales.items.map((item, index) => (
+        {items.map((item, index) => (
           <Item
             key={index}
             nombre={item.nombre}
